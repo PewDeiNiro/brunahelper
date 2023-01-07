@@ -129,6 +129,7 @@ function main()
 				sampAddChatMessage(scr_tag .. " {FFFFFF} Вышло новое обновление! Начинаю загрузку...", 0xFFFFFF)
 				update_state = true
 			end
+			script_vers = tonumber(updateIni.info.vers)
 		end
 	end)
 
@@ -153,7 +154,7 @@ end
 function sendBrunaChat(message)
 	if connected and message then
 		s:sendChat("#bruna", message)
-		sampAddChatMessage("{1E1E1E}[???] " .. nickname .. ":{FFFFFF} " ..  message, 0xFFFFFF)
+		sampAddChatMessage("{1E1E1E}[Семья] " .. nickname .. ":{FFFFFF} " ..  message, 0xFFFFFF)
 	end
 end
 
